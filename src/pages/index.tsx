@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Feed from '../components/Templates/Feed'
+import Sidebar from '../components/Common/Sidebar';
 
 export default function Home() {
   return (
@@ -8,10 +10,9 @@ export default function Home() {
         <link rel="icon" href="/twitter.svg" />
       </Head>
 
-      <main>
-        <div>
-
-        </div>
+      <main className="flex min-h-screen mx-auto">
+        <Sidebar />
+        <Feed />
       </main>
     </>
   )

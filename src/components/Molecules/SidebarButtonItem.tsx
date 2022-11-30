@@ -1,5 +1,5 @@
 import { cn } from '../../utils/cn';
-import { buttonNameType } from '../Common/Sidebar';
+import { buttonNameType } from '../Templates/Sidebar';
 
 type Props = {
     buttonName: buttonNameType
@@ -12,7 +12,7 @@ type Props = {
 
 }
 
-const SidebarItem = (props: Props) => {
+const SidebarButtonItem = (props: Props) => {
 
     const classes: string[] = []
     props.className && classes.push(props.className)
@@ -33,7 +33,7 @@ const SidebarItem = (props: Props) => {
         </button>
     )
 }
-export default SidebarItem
+export default SidebarButtonItem
 
 
     // props.appearance && classes.push('font-bold')

@@ -5,10 +5,8 @@ import Image from 'next/image'
 const MicroProfile = () => {
     return (
         <div className="hoverEffect p-2
-        text-gray-700 flex items-center justify-center xl:justify-start mt-auto">
+        text-gray-700 flex items-center justify-center xl:justify-start mt-auto mb-2">
             <Image
-                //   onClick={onSignOut}
-                //   src={currentUser?.userImg}
                 src="/twitter.svg"
                 alt="user-img"
                 className="h-10 w-10 rounded-full xl:mr-2"
@@ -17,12 +15,10 @@ const MicroProfile = () => {
             />
             <div className="leading-5 hidden xl:inline">
                 <h4 className="font-bold">
-                    {/* {currentUser?.name} */}
                     kazukioshima
                 </h4>
                 <p className="text-gray-500">
                     @kazuki
-                    {/* {currentUser?.username} */}
                 </p>
             </div>
             <EllipsisHorizontalIcon className="h-5 xl:ml-8 hidden xl:inline" />

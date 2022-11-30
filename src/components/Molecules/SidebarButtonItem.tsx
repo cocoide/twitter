@@ -20,7 +20,7 @@ const SidebarButtonItem = (props: Props) => {
     return (
         <button
             onClick={() => props.setBtnActive(props.buttonName)}
-            className={cn('hoverEffect flex items-center  justify-center xl:justify-start text-lg space-x-3',
+            className={cn('hoverEffect  flex items-center  justify-center xl:justify-start text-lg space-x-3',
                 props.btnActice === `${props.buttonName}` ? " text-[#1DA1F2]" : "text-gray-700")}>
 
             {props.IconActive && props.btnActice === `${props.buttonName}` ?

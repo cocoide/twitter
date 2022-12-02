@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const TwitterIcon = (props: any) => {
+const TwitterIcon = () => {
     return (
         <div>
             <Image src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png" alt="twitterIcon"

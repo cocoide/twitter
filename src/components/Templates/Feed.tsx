@@ -1,6 +1,7 @@
-import FeedForm from '../Organisms/FeedForm'
-import FeedHeader from '../Organisms/FeedHeader'
+import FeedHeader from '../Organisms/FeedHeader';
+import FeedForm from '../Organisms/FeedForm';
 import FeedPostGroup from '../Organisms/FeedPostGroup';
+
 
 const Feed = () => {
 

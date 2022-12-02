@@ -1,46 +1,37 @@
-import { buttonNameType } from '../Templates/Sidebar';
 import { useState } from 'react';
-import SidebarButtonItem from '../Molecules/SidebarButtonItem';
+import { SidebarButtonType } from '../../models/button';
 
-import HomeIconActive from 'public/IconActive/HomeActive.svg'
-import BellIconActive from "public/IconActive/BellActive.svg"
-import InboxIconActive from "public/IconActive/InboxActive.svg"
-import BookmarkIconActive from "public/IconActive/BookmarkActive.svg"
-import ClipboardIconActive from "public/IconActive/ClipboardActive.svg"
-import UsericonActive from "public/IconActive/UserActive.svg"
-import EllipsisHorizontalCircleIconActive from "public/IconActive/EllipsisHorizontalCircleActive.svg"
-import HashtagiconActive from "public/IconActive/HashtagActive.svg"
-
-import {
-    BellIcon,
-    BookmarkIcon,
-    ClipboardIcon,
-    EllipsisHorizontalCircleIcon,
-    HashtagIcon, HomeIcon,
-    InboxIcon,
-    UserIcon
-} from '@heroicons/react/24/outline'
-
+import ActiveHomeIcon from 'public/ActiveIcons/ActiveHome.svg'
+import ActiveBellicon from 'public/ActiveIcons/ActiveBell.svg'
+import ActiveInboxIcon from "public/ActiveIcons/ActiveInbox.svg"
+import ActiveBookmarkIcon from "public/ActiveIcons/ActiveBookmark.svg"
+import ActiveClipboardIcon from "public/ActiveIcons/ActiveClipboard.svg"
+import ActiveUserIcon from "public/ActiveIcons/ActiveUser.svg"
+import ActiveEllipsisHorizontalCircleIcon from "public/ActiveIcons/ActiveEllipsisHorizontalCircle.svg"
+import ActiveHashtagIcon from "public/ActiveIcons/ActiveHashtag.svg"
+import SidebarButton from '../Molecules/SidebarButton';
+import { BellIcon, BookmarkIcon, ClipboardIcon, EllipsisHorizontalCircleIcon, HashtagIcon, HomeIcon, InboxIcon, UserIcon }
+    from '@heroicons/react/24/outline'
 
 const SidebarButtonGroup = () => {
-    const [btnActive, setBtnActive] = useState<buttonNameType>("Home");
+    const [btnActive, setBtnActive] = useState<SidebarButtonType>("Home");
     return (
         <div>
-            <SidebarButtonItem buttonName={"Home"} Icon={HomeIcon} IconActive={HomeIconActive}
+            <SidebarButton ButtonName={"Home"} Icon={HomeIcon} ActiveIcon={ActiveHomeIcon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
-            <SidebarButtonItem buttonName={"Explore"} Icon={HashtagIcon} IconActive={HashtagiconActive}
+            <SidebarButton ButtonName={"Explore"} Icon={HashtagIcon} ActiveIcon={ActiveHashtagIcon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
-            <SidebarButtonItem buttonName={"Notifications"} Icon={BellIcon} IconActive={BellIconActive}
+            <SidebarButton ButtonName={"Notifications"} Icon={BellIcon} ActiveIcon={ActiveBellicon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
-            <SidebarButtonItem buttonName={"Messages"} Icon={InboxIcon} IconActive={InboxIconActive}
+            <SidebarButton ButtonName={"Messages"} Icon={InboxIcon} ActiveIcon={ActiveInboxIcon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
-            <SidebarButtonItem buttonName={"Bookmarks"} Icon={BookmarkIcon} IconActive={BookmarkIconActive}
+            <SidebarButton ButtonName={"Bookmarks"} Icon={BookmarkIcon} ActiveIcon={ActiveBookmarkIcon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
-            <SidebarButtonItem buttonName={"Lists"} Icon={ClipboardIcon} IconActive={ClipboardIconActive}
+            <SidebarButton ButtonName={"Lists"} Icon={ClipboardIcon} ActiveIcon={ActiveClipboardIcon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
-            <SidebarButtonItem buttonName={"Profile"} Icon={UserIcon} IconActive={UsericonActive}
+            <SidebarButton ButtonName={"Profile"} Icon={UserIcon} ActiveIcon={ActiveUserIcon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
-            <SidebarButtonItem buttonName={"More"} Icon={EllipsisHorizontalCircleIcon} IconActive={EllipsisHorizontalCircleIconActive}
+            <SidebarButton ButtonName={"More"} Icon={EllipsisHorizontalCircleIcon} ActiveIcon={ActiveEllipsisHorizontalCircleIcon}
                 btnActice={btnActive} setBtnActive={setBtnActive} />
         </div>
     )

@@ -16,11 +16,11 @@ const SidebarProfile = () => {
 
             <div className="leading-5 hidden xl:inline">
                 <h4 className="font-bold"
-                >kazukioshima
+                >Kazuki
                 </h4>
 
                 <p className="text-gray-500"
-                >@kazuki
+                >@kazukioshima
                 </p>
             </div>
             <EllipsisHorizontalIcon className="h-5 xl:ml-8 hidden xl:inline" />

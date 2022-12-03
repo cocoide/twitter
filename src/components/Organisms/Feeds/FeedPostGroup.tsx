@@ -1,7 +1,7 @@
 
 
-import { FeedPostType } from '../../models/post';
-import FeedPost from '../Molecules/FeedPost';
+import { FeedPostType } from '../../../models/post';
+import FeedPost from '../../Molecules/FeedPost';
 
 const FeedPostGroup: React.FC<any> = ({ FeedPostLists }) => {
     return (

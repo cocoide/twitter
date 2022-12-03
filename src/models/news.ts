@@ -1,4 +1,4 @@
-export type NewsResType = {
+export type ResNewsType = {
     status?: string,
     totalResults?: number,
     articles: articlesType[],

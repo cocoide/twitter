@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SidebarButtonType } from '../../models/button';
+import { SidebarButtonType } from '../../../models/button';
 
 import ActiveHomeIcon from 'public/ActiveIcons/ActiveHome.svg'
 import ActiveBellicon from 'public/ActiveIcons/ActiveBell.svg'
@@ -9,7 +9,7 @@ import ActiveClipboardIcon from "public/ActiveIcons/ActiveClipboard.svg"
 import ActiveUserIcon from "public/ActiveIcons/ActiveUser.svg"
 import ActiveEllipsisHorizontalCircleIcon from "public/ActiveIcons/ActiveEllipsisHorizontalCircle.svg"
 import ActiveHashtagIcon from "public/ActiveIcons/ActiveHashtag.svg"
-import SidebarButton from '../Molecules/SidebarButton';
+import SidebarButton from '../../Molecules/SidebarButton';
 import { BellIcon, BookmarkIcon, ClipboardIcon, EllipsisHorizontalCircleIcon, HashtagIcon, HomeIcon, InboxIcon, UserIcon }
     from '@heroicons/react/24/outline'
 

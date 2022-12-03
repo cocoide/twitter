@@ -1,15 +1,20 @@
 
 import { FC } from 'react'
-import { NewsResType } from '../../models/news'
-import SearchWidget from '../Molecules/SearchWidget'
-import NewsWidgets from '../Organisms/NewsWidgets';
+import { ResNewsType } from '../../models/news';
+import { RamdomUserType, ResRamdomUsersType } from '../../models/users';
+import SearchWidget from '../Molecules/Widgets/SearchWidget'
+import NewsWidget from '../Organisms/Widgets/NewsWidget';
+import UserWidget from '../Organisms/Widgets/UserWidget';
 
-const Widgets: FC<NewsResType> = ({ articles }) => {
+
+const Widgets: FC<ResNewsType & ResRamdomUsersType> = ({ articles, results }) => {
 
     return (
         <div className="xl:w-[600px] hidden lg:inline ml-8 space-y-5">
+
             <SearchWidget />
-            <NewsWidgets articles={articles} />
+            <NewsWidget articles={articles} />
+            <UserWidget results={results} />
         </div>
     )
 }

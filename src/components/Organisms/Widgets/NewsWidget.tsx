@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { NewsResType } from '../../models/news'
-import Article from '../Molecules/Article'
+import { ResNewsType } from '../../../models/news'
+import Article from '../../Molecules/Widgets/Article'
 
-const NewsWidgets = (props: NewsResType) => {
+const NewsWidget = (props: ResNewsType) => {
 
     const [articlesNum, setArticlesNum] = useState<number>(3)
 
@@ -22,4 +22,4 @@ const NewsWidgets = (props: NewsResType) => {
         </div>
     )
 }
-export default NewsWidgets
+export default NewsWidget

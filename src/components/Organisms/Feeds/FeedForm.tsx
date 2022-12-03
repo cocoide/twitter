@@ -1,5 +1,5 @@
 import { FaceSmileIcon, PhotoIcon } from '@heroicons/react/24/outline'
-import TwitterIcon from '../Atoms/TwitterIcon'
+import TwitterIcon from '../../Atoms/TwitterIcon'
 
 const FeedForm = () => {
     return (
@@ -7,10 +7,10 @@ const FeedForm = () => {
 
             <div className="divide-y divide-gray-200">
                 <div className="flex">
-                <TwitterIcon />
+                    <TwitterIcon />
                     <textarea className="w-full border-none focus:ring-0"
                         rows={2} placeholder="What's happing?"></textarea>
-            </div>
+                </div>
 
 
                 <div className="flex justify-between items-center pt-2">
@@ -21,7 +21,7 @@ const FeedForm = () => {
                     <button className="bg-[#1DA1F2] rounded-full font-bold py-1.5 px-4 text-white shadow-md
                     hover:brightness-95 disabled:opacity-50"
                     >Tweet</button>
-            </div>
+                </div>
 
             </div>
         </div>

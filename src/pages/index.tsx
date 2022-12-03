@@ -1,17 +1,19 @@
-import { GetServerSideProps, GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head'
 import { FC } from 'react';
 import Feed from '../components/Templates/Feed'
 import Sidebar from '../components/Templates/Sidebar';
 import Widgets from '../components/Templates/Widgets';
-import { newsFetcher } from '../libs/fetcher';
+import { newsFetcher, ramdomUsersFetcher } from '../libs/fetcher';
 import { articlesType } from '../models/news';
+import { RamdomUserType } from '../models/users';
 
-type WidgetsProps = {
+type Props = {
   articles: articlesType[],
+  ramdomUser: RamdomUserType[]
 }
 
-const Home: FC<WidgetsProps> = (props) => {
+const Home: FC<Props> = (props) => {
   return (
     <>
       <Head>
@@ -23,7 +25,7 @@ const Home: FC<WidgetsProps> = (props) => {
 
         <Sidebar />
         <Feed />
-        <Widgets articles={props.articles} />
+        <Widgets articles={props.articles} results={props.ramdomUser} />
 
       </main>
     </>
@@ -33,13 +35,18 @@ const Home: FC<WidgetsProps> = (props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const NEWS_API_URL = "https://saurav.tech/NewsAPI/top-headlines/category/business/in.json"
-  const ResNewsAPI = await newsFetcher(NEWS_API_URL)
+  const NewsAPI_URL = "https://saurav.tech/NewsAPI/top-headlines/category/business/in.json"
+  const ResNewsAPI = await newsFetcher(NewsAPI_URL)
   const articles = ResNewsAPI?.articles
+
+  const RamdomUsersAPI_URL = "https://randomuser.me/api/?results=30&inc=name,login,picture"
+  const ResRamdomUsersAPI = await ramdomUsersFetcher(RamdomUsersAPI_URL)
+  const ramdomUser = ResRamdomUsersAPI?.results
 
   return {
     props: {
       articles,
+      ramdomUser,
     },
     // revalidate: 60 * 10,
   };

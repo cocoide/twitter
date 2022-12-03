@@ -1,6 +1,6 @@
-import FeedHeader from '../Organisms/FeedHeader';
-import FeedForm from '../Organisms/FeedForm';
-import FeedPostGroup from '../Organisms/FeedPostGroup';
+import FeedHeader from '../Molecules/FeedHeader';
+import FeedForm from '../Organisms/Feeds/FeedForm';
+import FeedPostGroup from '../Organisms/Feeds/FeedPostGroup';
 import { FeedPostLists } from '../../models/post';
 
 

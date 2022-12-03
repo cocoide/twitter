@@ -1,4 +1,4 @@
-import { BookmarkIcon, ChartBarIcon, ChatBubbleOvalLeftEllipsisIcon, EllipsisHorizontalIcon, HeartIcon, ShareIcon, TrashIcon } from '@heroicons/react/24/outline'
+import { ChartBarIcon, ChatBubbleOvalLeftEllipsisIcon, EllipsisHorizontalIcon, HeartIcon, ShareIcon, TrashIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import { FeedPostType } from '../../models/post'
 
@@ -13,7 +13,6 @@ const FeedPost = (props: FeedPostType) => {
             {/* Right side start*/}
             <div className="">
 
-
                 {/* Header*/}
                 <div className="flex items-center justify-between">
                     {/* User Imformation */}
@@ -23,17 +22,14 @@ const FeedPost = (props: FeedPostType) => {
                         <span className="text-sm sm:text-[16px] hover:underline">{props.timestamp}</span>
                     </div>
 
-
                     {/* Dot icon */}
                     <div className="hoverEffect h-10 w-10 hover:bg-sky-100 hover:text-sky-500">
                         <EllipsisHorizontalIcon className='h-10' />
                     </div>
 
                 </div>
-
                 {/* Post text */}
                 <div className="text-gray-800 text-[15px} mb-2">{props.text}</div>
-
                 {/* Post image*/}
                 <Image src={props.img} alt='post-img' height={200} width={600} className="rounded-xl mr-2" />
 

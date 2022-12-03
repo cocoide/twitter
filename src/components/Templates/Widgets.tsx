@@ -1,12 +1,15 @@
-import SearchBar from '../Molecules/SearchBar'
 
+import { FC } from 'react'
+import { NewsResType } from '../../models/news'
+import SearchWidget from '../Molecules/SearchWidget'
+import NewsWidgets from '../Organisms/NewsWidgets';
 
-const Widgets = () => {
+const Widgets: FC<NewsResType> = ({ articles }) => {
+
     return (
         <div className="xl:w-[600px] hidden lg:inline ml-8 space-y-5">
-            <div className="w-[90%] xl:w-[75%] sticky top-0 bg-white py-1.5 z-50">
-                <SearchBar />
-            </div>
+            <SearchWidget />
+            <NewsWidgets articles={articles} />
         </div>
     )
 }

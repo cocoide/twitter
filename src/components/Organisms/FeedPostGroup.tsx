@@ -1,11 +1,12 @@
 
-import { FeedPostLists } from '../../models/post';
+
+import { FeedPostType } from '../../models/post';
 import FeedPost from '../Molecules/FeedPost';
 
-const FeedPostGroup = () => {
+const FeedPostGroup: React.FC<any> = ({ FeedPostLists }) => {
     return (
         <div className="">
-            {FeedPostLists.map((post) => (
+            {FeedPostLists.map((post: FeedPostType) => (
                 <div key={post.id}>
                     <FeedPost
                         id={post.id}

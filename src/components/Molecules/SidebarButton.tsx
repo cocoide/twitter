@@ -9,7 +9,6 @@ type ButtonProps = {
     className?: string
     btnActice?: SidebarButtonType
     setBtnActive: React.Dispatch<React.SetStateAction<SidebarButtonType>>
-
 }
 
 const SidebarButton = (props: ButtonProps) => {

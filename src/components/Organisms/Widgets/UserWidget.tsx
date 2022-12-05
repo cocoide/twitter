@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ResRamdomUsersType } from '../../../models/users'
+import { ResRamdomUsersType } from '../../../models/ramdomUser'
 import RamdomUsers from '../../Molecules/Widgets/RamdomUsers';
 
 
@@ -16,8 +16,7 @@ const UserWidget = (props: ResRamdomUsersType) => {
       {props.results.slice(0, usersNum).map((user) => (
         <RamdomUsers key={user.login?.uuid}
           name={user.name} login={user.login} picture={user.picture} />
-      )
-      )}
+      ))}
 
       <button
         onClick={() => setUsersNum(usersNum + 3)}

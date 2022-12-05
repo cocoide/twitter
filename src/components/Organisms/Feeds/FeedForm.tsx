@@ -22,7 +22,6 @@ const FeedForm = () => {
                     hover:brightness-95 disabled:opacity-50"
                     >Tweet</button>
                 </div>
-
             </div>
         </div>
     )

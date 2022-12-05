@@ -1,6 +1,6 @@
 import TweetButton from '../Atoms/TweetButton'
 import TwitterIcon from '../Atoms/TwitterIcon';
-import SidebarProfile from '../Molecules/SidebarProfile';
+import SidebarProfile from '../Organisms/SidebarProfile';
 import SidebarButtonGroup from '../Organisms/Sidebars/SidebarButtonGroup';
 
 const Sidebar = () => {

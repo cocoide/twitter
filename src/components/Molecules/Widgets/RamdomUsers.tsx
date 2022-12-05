@@ -1,4 +1,4 @@
-import { RamdomUserType } from '../../../models/users'
+import { RamdomUserType } from '../../../models/ramdomUser'
 
 const RamdomUsers = (props: RamdomUserType) => {
     return (

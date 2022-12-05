@@ -6,7 +6,7 @@ import Sidebar from '../components/Templates/Sidebar';
 import Widgets from '../components/Templates/Widgets';
 import { newsFetcher, ramdomUsersFetcher } from '../libs/fetcher';
 import { articlesType } from '../models/news';
-import { RamdomUserType } from '../models/users';
+import { RamdomUserType } from '../models/ramdomUser';
 
 type Props = {
   articles: articlesType[],

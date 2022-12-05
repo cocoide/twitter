@@ -1,7 +1,6 @@
 
 import { ResNewsType } from '../models/news'
-import { ResRamdomUsersType } from '../models/users'
-
+import { ResRamdomUsersType } from '../models/ramdomUser'
 
 export const newsFetcher = async (arg: string): Promise<ResNewsType>=> {
     const res = await fetch(arg)
